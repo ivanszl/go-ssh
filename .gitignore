@@ -1,0 +1,5 @@
+assh*
+.vscode
+main
+ssh
+go-ssh
