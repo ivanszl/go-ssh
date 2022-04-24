@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"net/url"
+	"os"
 	"strconv"
 	"strings"
 
@@ -21,8 +22,9 @@ func main() {
 	)
 	flag.StringVar(&url, "h", "root@127.0.0.1:22", "远程服务器的地址信息")
 	flag.StringVar(&key, "k", "", "私钥")
-	flag.StringVar(&password, "p", "", "私钥的密码")
+	// flag.StringVar(&password, "p", "", "私钥的密码")
 	flag.Parse()
+	password = os.Getenv("SSH_PASSWD")
 
 	err := connect(url, key, password)
 	if err != nil {
@@ -58,7 +60,7 @@ func connect(s, key, password string) error {
 		auth.Keys = append(auth.Keys, key)
 		auth.KeyPasswords = append(auth.KeyPasswords, password)
 	} else {
-		password, _ = u.User.Password()
+		// password, _ = u.User.Password()
 		auth.Passwords = append(auth.Passwords, password)
 	}
 	client, err := v1.NewNativeClient(u.User.Username(), host, "SSH-2.0-IvanLamClient-1.0", port, auth, nil)

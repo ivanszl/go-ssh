@@ -8,7 +8,8 @@
 支持:
 - 采用证书登陆
 - 支持证书密码
-- 账号密码自登陆，采用用`username`:`passwd`@`host`:`port` 方式
+- 账号密码自登陆，采用用`username`@`host`:`port` 方式
+- 证书密码和用户密码改为`SSH_PASSWORD`环境变量模式
 
 ## 安装方式
 
