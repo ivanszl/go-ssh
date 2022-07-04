@@ -10,7 +10,6 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/ivanlsz/go-ssh/log"
 	"golang.org/x/crypto/ssh"
 )
 
@@ -22,12 +21,12 @@ func GetKeyPair(file string) (string, string, error) {
 	if err == nil {
 		priv, err := ioutil.ReadFile(file)
 		if err != nil {
-			log.L().Debug(fmt.Sprintf("Failed to read file - %s", err))
+			fmt.Sprintf("Failed to read file - %s", err)
 			goto genKeys
 		}
 		pub, err := ioutil.ReadFile(file + ".pub")
 		if err != nil {
-			log.L().Debug(fmt.Sprintf("Failed to read pub file - %s", err))
+			fmt.Sprintf("Failed to read pub file - %s", err)
 			goto genKeys
 		}
 		return string(pub), string(priv), nil

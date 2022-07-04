@@ -75,5 +75,3 @@ gotest.tools/v3 v3.0.2 h1:kG1BFyqVHuQoVQiR1bWGnfz/fmHvvuiSPIV7rvl360E=
 gotest.tools/v3 v3.0.2/go.mod h1:3SzNCllyD9/Y+b5r9JIKQ474KzkZyqLqEfYqMsX94Bk=
 honnef.co/go/tools v0.0.1-2019.2.3 h1:3JgtbtFHMiCmsznwGVTUWbgGov+pVqnlf1dEJTNAXeM=
 honnef.co/go/tools v0.0.1-2019.2.3/go.mod h1:a3bituU0lyd329TUQxRnasdCoJDkEUEAqEt0JzvZhAg=
-wx-gitlab.xunlei.cn/galaxy/go-logger v1.1.1 h1:DCU0vG/ZIHcuK5qprKKQXP1ZXWqAf0DpnvtC4KgJ3ak=
-wx-gitlab.xunlei.cn/galaxy/go-logger v1.1.1/go.mod h1:XMj+hKleRw6EoZqArq1hUOb1yTXiht+unzTY+r6coXQ=

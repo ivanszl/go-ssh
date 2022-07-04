@@ -7,5 +7,4 @@ require (
 	github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6 // indirect
 	go.uber.org/zap v1.14.1
 	golang.org/x/crypto v0.0.0-20200406173513-056763e48d71
-	wx-gitlab.xunlei.cn/galaxy/go-logger v1.1.1
 )

@@ -11,7 +11,6 @@ import (
 	"syscall"
 
 	"github.com/docker/docker/pkg/term"
-	"github.com/ivanlsz/go-ssh/log"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/terminal"
 )
@@ -118,8 +117,7 @@ func NewNativeConfig(user, clientVersion string, auth *Auth, hostKeyCallback ssh
 
 func (client *NativeClient) dialSuccess() (bool, error) {
 	if _, err := ssh.Dial("tcp", fmt.Sprintf("%s:%d", client.Hostname, client.Port), &client.Config); err != nil {
-		log.L().Debug(fmt.Sprintf("Error dialing TCP: %s", err))
-		return false, nil
+		return false, err
 	}
 	return true, nil
 }
